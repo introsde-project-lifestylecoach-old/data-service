@@ -30,6 +30,5 @@ public interface DataService_interface {
 	
 	@WebMethod(operationName="create_user")
     @WebResult(name = "User")
-	String create_user(String user);	
-
+	String create_user(String user);		
 }
