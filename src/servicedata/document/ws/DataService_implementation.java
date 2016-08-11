@@ -1,8 +1,8 @@
-package matteogabburo.document.ws;
+package servicedata.document.ws;
 
 import javax.jws.WebService;
 
-@WebService(endpointInterface = "matteogabburo.document.ws.DataService_interface", serviceName="data-service")
+@WebService(endpointInterface = "servicedata.document.ws.DataService_interface", serviceName="data-service")
 public class DataService_implementation implements DataService_interface {
 
 	@Override

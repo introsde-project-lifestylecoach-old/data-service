@@ -1,5 +1,5 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,17 +8,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per activity complex type.
+ * <p>Classe Java per goal complex type.
  * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType name="activity">
+ * &lt;complexType name="goal">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="id_activity" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="id_goal" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -29,16 +29,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "activity", propOrder = {
+@XmlType(name = "goal", propOrder = {
     "description",
-    "idActivity",
+    "idGoal",
     "name"
 })
-public class Activity {
+public class Goal {
 
     protected String description;
-    @XmlElement(name = "id_activity")
-    protected Long idActivity;
+    @XmlElement(name = "id_goal")
+    protected Long idGoal;
     protected String name;
 
     /**
@@ -66,27 +66,27 @@ public class Activity {
     }
 
     /**
-     * Recupera il valore della proprietà idActivity.
+     * Recupera il valore della proprietà idGoal.
      * 
      * @return
      *     possible object is
      *     {@link Long }
      *     
      */
-    public Long getIdActivity() {
-        return idActivity;
+    public Long getIdGoal() {
+        return idGoal;
     }
 
     /**
-     * Imposta il valore della proprietà idActivity.
+     * Imposta il valore della proprietà idGoal.
      * 
      * @param value
      *     allowed object is
      *     {@link Long }
      *     
      */
-    public void setIdActivity(Long value) {
-        this.idActivity = value;
+    public void setIdGoal(Long value) {
+        this.idGoal = value;
     }
 
     /**

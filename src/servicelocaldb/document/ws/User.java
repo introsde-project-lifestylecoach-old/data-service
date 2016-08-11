@@ -1,5 +1,5 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="activities" type="{http://ws.document.matteogabburo/}userActivity" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="cures" type="{http://ws.document.matteogabburo/}cure" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="goals" type="{http://ws.document.matteogabburo/}userGoal" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="healthList" type="{http://ws.document.matteogabburo/}health" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="activities" type="{http://ws.document.servicelocaldb/}userActivity" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="cures" type="{http://ws.document.servicelocaldb/}cure" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="goals" type="{http://ws.document.servicelocaldb/}userGoal" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="healthList" type="{http://ws.document.servicelocaldb/}health" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="id_user" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="mail" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>

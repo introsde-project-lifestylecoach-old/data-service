@@ -1,4 +1,4 @@
-package matteogabburo.document.endpoint;
+package servicedata.document.endpoint;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -6,7 +6,7 @@ import java.net.URISyntaxException;
 
 import javax.xml.ws.Endpoint;
 
-import matteogabburo.document.ws.DataService_implementation;
+import servicedata.document.ws.DataService_implementation;
 
 public class DataService_Publisher {
 

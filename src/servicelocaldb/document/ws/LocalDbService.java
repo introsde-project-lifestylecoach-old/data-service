@@ -1,5 +1,5 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "local-db-service", targetNamespace = "http://ws.document.matteogabburo/", wsdlLocation = "http://localhost:6902/ws/local-db-service?wsdl")
+@WebServiceClient(name = "local-db-service", targetNamespace = "http://ws.document.servicelocaldb/", wsdlLocation = "http://localhost:6902/ws/local-db-service?wsdl")
 public class LocalDbService
     extends Service
 {
 
     private final static URL LOCALDBSERVICE_WSDL_LOCATION;
     private final static WebServiceException LOCALDBSERVICE_EXCEPTION;
-    private final static QName LOCALDBSERVICE_QNAME = new QName("http://ws.document.matteogabburo/", "local-db-service");
+    private final static QName LOCALDBSERVICE_QNAME = new QName("http://ws.document.servicelocaldb/", "local-db-service");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class LocalDbService
      */
     @WebEndpoint(name = "LocalDB_implementationPort")
     public LocalDBInterface getLocalDBImplementationPort() {
-        return super.getPort(new QName("http://ws.document.matteogabburo/", "LocalDB_implementationPort"), LocalDBInterface.class);
+        return super.getPort(new QName("http://ws.document.servicelocaldb/", "LocalDB_implementationPort"), LocalDBInterface.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class LocalDbService
      */
     @WebEndpoint(name = "LocalDB_implementationPort")
     public LocalDBInterface getLocalDBImplementationPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://ws.document.matteogabburo/", "LocalDB_implementationPort"), LocalDBInterface.class, features);
+        return super.getPort(new QName("http://ws.document.servicelocaldb/", "LocalDB_implementationPort"), LocalDBInterface.class, features);
     }
 
     private static URL __getWsdlLocation() {

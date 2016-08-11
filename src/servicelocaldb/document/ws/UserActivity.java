@@ -1,5 +1,5 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="activities" type="{http://ws.document.matteogabburo/}activity" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="activities" type="{http://ws.document.servicelocaldb/}activity" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="id_activity" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="id_user" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="id_useractivity" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>

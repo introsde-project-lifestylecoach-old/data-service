@@ -1,6 +1,8 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -8,21 +10,21 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per cure complex type.
+ * <p>Classe Java per userGoal complex type.
  * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType name="cure">
+ * &lt;complexType name="userGoal">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="duration" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="id_cure" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="done" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="duration" type="{http://www.w3.org/2001/XMLSchema}float" minOccurs="0"/>
+ *         &lt;element name="goals" type="{http://ws.document.servicelocaldb/}goal" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element name="id_medic" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="id_user" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element ref="{http://ws.document.matteogabburo/}medic" minOccurs="0"/>
+ *         &lt;element name="id_usergoal" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,49 +34,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "cure", propOrder = {
-    "description",
+@XmlType(name = "userGoal", propOrder = {
+    "done",
     "duration",
-    "idCure",
+    "goals",
     "idMedic",
     "idUser",
-    "medic"
+    "idUsergoal"
 })
-public class Cure {
+public class UserGoal {
 
-    protected String description;
-    protected Long duration;
-    @XmlElement(name = "id_cure")
-    protected Long idCure;
+    protected boolean done;
+    protected Float duration;
+    @XmlElement(nillable = true)
+    protected List<Goal> goals;
     @XmlElement(name = "id_medic")
     protected Long idMedic;
     @XmlElement(name = "id_user")
     protected Long idUser;
-    @XmlElement(namespace = "http://ws.document.matteogabburo/")
-    protected Medic medic;
+    @XmlElement(name = "id_usergoal")
+    protected Long idUsergoal;
 
     /**
-     * Recupera il valore della proprietà description.
+     * Recupera il valore della proprietà done.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getDescription() {
-        return description;
+    public boolean isDone() {
+        return done;
     }
 
     /**
-     * Imposta il valore della proprietà description.
+     * Imposta il valore della proprietà done.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setDescription(String value) {
-        this.description = value;
+    public void setDone(boolean value) {
+        this.done = value;
     }
 
     /**
@@ -82,10 +76,10 @@ public class Cure {
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link Float }
      *     
      */
-    public Long getDuration() {
+    public Float getDuration() {
         return duration;
     }
 
@@ -94,35 +88,40 @@ public class Cure {
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link Float }
      *     
      */
-    public void setDuration(Long value) {
+    public void setDuration(Float value) {
         this.duration = value;
     }
 
     /**
-     * Recupera il valore della proprietà idCure.
+     * Gets the value of the goals property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
-     */
-    public Long getIdCure() {
-        return idCure;
-    }
-
-    /**
-     * Imposta il valore della proprietà idCure.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the goals property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getGoals().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Goal }
+     * 
+     * 
      */
-    public void setIdCure(Long value) {
-        this.idCure = value;
+    public List<Goal> getGoals() {
+        if (goals == null) {
+            goals = new ArrayList<Goal>();
+        }
+        return this.goals;
     }
 
     /**
@@ -174,27 +173,27 @@ public class Cure {
     }
 
     /**
-     * Recupera il valore della proprietà medic.
+     * Recupera il valore della proprietà idUsergoal.
      * 
      * @return
      *     possible object is
-     *     {@link Medic }
+     *     {@link Long }
      *     
      */
-    public Medic getMedic() {
-        return medic;
+    public Long getIdUsergoal() {
+        return idUsergoal;
     }
 
     /**
-     * Imposta il valore della proprietà medic.
+     * Imposta il valore della proprietà idUsergoal.
      * 
      * @param value
      *     allowed object is
-     *     {@link Medic }
+     *     {@link Long }
      *     
      */
-    public void setMedic(Medic value) {
-        this.medic = value;
+    public void setIdUsergoal(Long value) {
+        this.idUsergoal = value;
     }
 
 }

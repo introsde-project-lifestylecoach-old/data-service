@@ -1,5 +1,5 @@
 
-package matteogabburo.document.ws;
+package serviceadaptor.document.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per get_user_by_idResponse complex type.
+ * <p>Classe Java per get_user_from_remoteResponse complex type.
  * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType name="get_user_by_idResponse">
+ * &lt;complexType name="get_user_from_remoteResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="User" type="{http://ws.document.matteogabburo/}user" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "get_user_by_idResponse", propOrder = {
-    "user"
+@XmlType(name = "get_user_from_remoteResponse", propOrder = {
+    "_return"
 })
-public class GetUserByIdResponse {
+public class GetUserFromRemoteResponse {
 
-    @XmlElement(name = "User")
-    protected User user;
+    @XmlElement(name = "return")
+    protected String _return;
 
     /**
-     * Recupera il valore della proprietà user.
+     * Recupera il valore della proprietà return.
      * 
      * @return
      *     possible object is
-     *     {@link User }
+     *     {@link String }
      *     
      */
-    public User getUser() {
-        return user;
+    public String getReturn() {
+        return _return;
     }
 
     /**
-     * Imposta il valore della proprietà user.
+     * Imposta il valore della proprietà return.
      * 
      * @param value
      *     allowed object is
-     *     {@link User }
+     *     {@link String }
      *     
      */
-    public void setUser(User value) {
-        this.user = value;
+    public void setReturn(String value) {
+        this._return = value;
     }
 
 }

@@ -1,22 +1,23 @@
 
-package matteogabburo.document.ws;
+package servicelocaldb.document.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java per get_user_by_id complex type.
+ * <p>Classe Java per update_userResponse complex type.
  * 
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType name="get_user_by_id">
+ * &lt;complexType name="update_userResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="User" type="{http://ws.document.servicelocaldb/}user" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,35 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "get_user_by_id", propOrder = {
-    "arg0"
+@XmlType(name = "update_userResponse", propOrder = {
+    "user"
 })
-public class GetUserById {
+public class UpdateUserResponse {
 
-    protected Long arg0;
+    @XmlElement(name = "User")
+    protected User user;
 
     /**
-     * Recupera il valore della proprietà arg0.
+     * Recupera il valore della proprietà user.
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link User }
      *     
      */
-    public Long getArg0() {
-        return arg0;
+    public User getUser() {
+        return user;
     }
 
     /**
-     * Imposta il valore della proprietà arg0.
+     * Imposta il valore della proprietà user.
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link User }
      *     
      */
-    public void setArg0(Long value) {
-        this.arg0 = value;
+    public void setUser(User value) {
+        this.user = value;
     }
 
 }
